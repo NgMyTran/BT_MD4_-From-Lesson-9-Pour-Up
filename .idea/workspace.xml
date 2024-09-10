@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8ac9b3b-3ac2-4ab0-8456-a16ff7204260" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/bt/CalculateServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/bt/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/bt/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/bt/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/bt/ProductServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/jsp/Todo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/jsp/TodoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/jsp/UploadServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/result.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bt/bt1.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bt/bt2.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bt/bt3GetProducts.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bt/bt4AddProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bt/resultBt2.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="d8ac9b3b-3ac2-4ab0-8456-a16ff7204260" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -214,7 +192,7 @@
       <workItem from="1725679841500" duration="1936000" />
       <workItem from="1725800781160" duration="10966000" />
       <workItem from="1725845225744" duration="32006000" />
-      <workItem from="1725897872530" duration="3077000" />
+      <workItem from="1725897872530" duration="3440000" />
     </task>
     <servers />
   </component>
@@ -233,11 +211,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/ra/bt/ProductServlet.java</url>
           <line>58</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ra/bt/ProductServlet.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

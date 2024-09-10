@@ -79,16 +79,9 @@ public class ProductServlet extends HttpServlet {
                         image = "/uploads/" + fileName;
                     }
 
-                    float price = 0;
-                    String priceParam = request.getParameter("price");
-                    if (priceParam != null && !priceParam.isEmpty()) {
-                        price = Float.parseFloat(priceParam);
-                    }
-                    int stock = 0;
-                    String stockParam = request.getParameter("stock");
-                    if (stockParam != null && !stockParam.isEmpty()) {
-                        stock = Integer.parseInt(stockParam);
-                    }
+                    float price = Float.parseFloat(request.getParameter("price"));
+                    int stock = Integer.parseInt(request.getParameter("stock"));
+
                     System.out.println("Name: " + name);
                     System.out.println("Image Path: " + image);
                     System.out.println("Price: " + price);
