@@ -56,7 +56,7 @@
 </head>
 <body>
 <div class="form-container">
-    <form method="post" action="/ProductServlet?action=addProduct" enctype="multipart/form-data">
+    <form method="post" action="/ProductServlet" enctype="multipart/form-data">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Enter product name" />
 
@@ -64,12 +64,13 @@
         <input type="file" id="image" name="image" />
 
         <label for="price">Price</label>
-        <input type="number" id="price" name="price" placeholder="Enter price" />
+        <input type="text" id="price" name="price" placeholder="Enter price" />
 
         <label for="stock">Stock</label>
-        <input type="number" id="stock" name="stock" placeholder="Enter stock quantity" />
+        <input type="text" id="stock" name="stock" placeholder="Enter stock quantity" />
 
-        <input type="submit" value="Add Product" />
+<%--        <input type="submit" name="action" value="addProduct" />--%>
+        <button type="submit" name="action" value="addProduct">ADD</button>
     </form>
 </div>
 </body>

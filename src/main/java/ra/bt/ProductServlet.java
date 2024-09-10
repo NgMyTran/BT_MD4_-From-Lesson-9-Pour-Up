@@ -81,15 +81,13 @@ public class ProductServlet extends HttpServlet {
 
                     float price = Float.parseFloat(request.getParameter("price"));
                     int stock = Integer.parseInt(request.getParameter("stock"));
-
-                    System.out.println("Name: " + name);
-                    System.out.println("Image Path: " + image);
-                    System.out.println("Price: " + price);
-                    System.out.println("Stock: " + stock);
-                    productList.add(new Product(id, name, image, price, stock));
-
-                    // Chuyển hướng đến trang danh sách sp sau khi thêm
-                    response.sendRedirect("/ProductServlet?action=getProducts");
+                    Product newProduct=  new Product(id, name, image, price, stock);
+                    productList.add(newProduct);
+                    request.setAttribute("products", productList);
+                    request.getRequestDispatcher("/bt/bt3GetProducts.jsp").forward(request, response);
+//                    productList.add(new Product(id, name, image, price, stock));
+//                    // Chuyển hướng đến trang danh sách sp sau khi thêm
+//                    response.sendRedirect("/ProductServlet?action=getProducts");
                     break;
             }
         }
