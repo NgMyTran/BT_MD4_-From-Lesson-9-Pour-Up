@@ -10,6 +10,12 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        .inactive {
+            background-color: #f8d7da; /* Màu đỏ nhạt cho hàng không hoạt động */
+            color: #721c24; /* Màu chữ đỏ tối để làm nổi bật hơn trên nền đỏ nhạt */
+        }
+    </style>
 </head>
 <body>
 <h1>Danh sách Categories</h1>
@@ -29,7 +35,7 @@
             var="c"
             varStatus="loop"
     >
-        <tr>
+        <tr class="${c.status ? '' : 'inactive'}">
             <td>${loop.count}</td>
             <td>${c.name}</td>
             <td>${c.status ? 'Active' : 'Inactive'}</td>
