@@ -5,10 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8ac9b3b-3ac2-4ab0-8456-a16ff7204260" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views_bt/category/add-category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views_bt/category/add-category.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views_bt/category/list-category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views_bt/category/list-category.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views_bt/product/list-product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views_bt/product/list-product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/bt/controller/CategoryServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/bt/controller/ProductServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/bt/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/bt/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/bt/service/IGenericService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/bt/service/category/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/bt/service/category/ICategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/bt/service/product/IProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/bt/service/product/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/add-customer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/detail-customer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/edit-customer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/list-customer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views_bt/category/add-category.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views_bt/category/confirm-delete.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views_bt/category/edit-category.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views_bt/category/list-category.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views_bt/product/add-product.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views_bt/product/detail-product.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views_bt/product/edit-product.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views_bt/product/list-product.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,27 +96,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build session9_MD4_WEB_APP.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 9.0.93.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;session11__MD4&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/TRAN/MD3_PROJECT&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build session9_MD4_WEB_APP.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 9.0.93.executor": "Run",
+    "git-widget-placeholder": "session12__MD4",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/TRAN/MD3_PROJECT",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "fileTemplates",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\TRAN\INTELLIJ\session9_MD4_WEB_APP\src\main\webapp" />
@@ -221,7 +239,7 @@
       <workItem from="1725969563072" duration="4351000" />
       <workItem from="1725977069017" duration="10633000" />
       <workItem from="1725989646072" duration="1858000" />
-      <workItem from="1726018482149" duration="852000" />
+      <workItem from="1726018482149" duration="1241000" />
     </task>
     <servers />
   </component>
