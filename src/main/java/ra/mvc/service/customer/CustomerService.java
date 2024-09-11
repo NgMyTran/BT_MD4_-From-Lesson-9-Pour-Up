@@ -1,62 +1,43 @@
 package ra.mvc.service.customer;
 
+import ra.mvc.dao.customer.CustomerDao;
+import ra.mvc.dao.customer.ICustomerDao;
 import ra.mvc.model.Customer;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class CustomerService implements ICustomerService {
-    private List<Customer> customerList = new ArrayList<>();
-
-    public CustomerService() {
-        // khơi tao giá trị ban dau
-        customerList.add(new Customer(1, "Nguyễn Văn A", "Hưng Nguyên", "hung@gmail.com"));
-        customerList.add(new Customer(2, "Nguyễn Văn B", "Hưng Nguyên", "hung@gmail.com"));
-        customerList.add(new Customer(3, "Nguyễn Văn C", "Hưng Nguyên", "hung@gmail.com"));
-    }
+//   ICustomerService customerService = new CustomerService();
+    private ICustomerDao customerDao = new CustomerDao();
 
     @Override
-    public List<Customer> findAll() {
-        return customerList;
+    public List<Customer> getAll() {
+        return customerDao.findAll();
     }
 
     @Override
     public Customer findById(Integer id) {
-        return customerList.stream().filter(c -> c.getId() == id)
-                .findFirst().orElse(null);
+        return customerDao.findById(id);
     }
 
     @Override
     public void save(Customer customer) {
-        if (findById(customer.getId()) == null) {
-            //k ton tai, them moi
-            customer.setId(getNewId());
-            customerList.add(customer);
+        if (findById(customer.getId()) != null) {
+           customerDao.update(customer);
         } else {
-            customerList.set(
-                    customerList.indexOf(
-                            findById(
-                                    customer.getId()
-                            )
-                    ), customer
-            );
+           customerDao.create(customer);
         }
     }
 
     @Override
     public void delete(Integer id) {
-        Customer cusDel = findById(id);
-        if (cusDel != null) {
-            customerList.remove(cusDel);
-        }
+        customerDao.delete(id);
     }
-
-    private int getNewId() {
-        return customerList.stream()
-                .map(Customer::getId)
-                .max(Comparator.naturalOrder())
-                .orElse(0) + 1;
-    }
+//
+//    private int getNewId() {
+//        return customerList.stream()
+//                .map(Customer::getId)
+//                .max(Comparator.naturalOrder())
+//                .orElse(0) + 1;
+//    }
 }

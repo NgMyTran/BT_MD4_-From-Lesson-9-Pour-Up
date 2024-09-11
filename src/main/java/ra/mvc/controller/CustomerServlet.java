@@ -11,15 +11,18 @@ import java.io.IOException;
 
 @WebServlet(value = "/CustomerServlet")
 public class CustomerServlet extends HttpServlet {
-    public ICustomerService customerService = new CustomerService();
-
+    public ICustomerService customerService;
+    @Override
+    public void init() throws ServletException {
+        customerService = new CustomerService();
+    }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action != null) {
             switch (action) {
                 case "GETALL":
-                    request.setAttribute("customers", customerService.findAll());
+                    request.setAttribute("customers", customerService.getAll());
                     request.getRequestDispatcher("/views/list-customer.jsp").forward(request, response);
                     break;
                 case "DELETE":
