@@ -46,6 +46,7 @@ public class CustomerDao implements ICustomerDao {
         try{
             callst = conn.prepareCall("select * from customer where  id = ?");
             ResultSet rs = callst.executeQuery();
+            callst.setInt(1,id);
             if(rs.next()){
                 Customer c = new Customer(
                         rs.getInt("id"),
@@ -88,6 +89,7 @@ public class CustomerDao implements ICustomerDao {
         // mở két nối
         Connection conn = ConnectionDB.getOpenConnection();
         CallableStatement callst = null;
+
         try{
             callst = conn.prepareCall("update customer set name=?, address=?, email=? where  id =?");
             callst.setString(1,customer.getName());

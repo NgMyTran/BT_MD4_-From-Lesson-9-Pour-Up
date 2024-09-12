@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Danh sách khách hàng</h1>
-<a href="/th_bt/create-user.jsp">+ Them moi khach hang</a>
+<a href="/views/add-customer.jsp">+ Them moi khach hang</a>
 <table border="10" cellspacing="10" cellpadding="10">
     <thead>
     <tr>
@@ -17,7 +17,7 @@
     </thead>
     <tbody>
     <c:forEach
-            items="${listUser}"
+            items="${customers}"
             var="cus"
             varStatus="loop"
     >
