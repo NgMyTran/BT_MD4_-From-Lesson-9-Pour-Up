@@ -1,6 +1,6 @@
 package ra.mvc;
 
-import ra.mvc.configOrUtil.ConnectionDB;
+import ra.mvc.configorutil.ConnectionDB;
 
 import java.sql.*;
 

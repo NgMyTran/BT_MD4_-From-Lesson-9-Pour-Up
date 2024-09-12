@@ -7,9 +7,10 @@
     <title>Tittle</title>
 </head>
 <body>
-
-<a href="/CustomerServlet?action=GETALL">Danh sách khách hàng</a>
-<a href="/CustomerServlet?action=GETALL">TH: Danh sách User</a>
+<div>
+    <a href="/StudentServlet?action=GETALL">Danh sách học sinh</a>
+</div>
+<div><a href="/views/account/login.jsp">Đăng nhập TK ngân hàng</a></div>
 <%--<div className="flex space-x-2">--%>
 <%--    <button className="bg-orange-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-400"><a href="/CategoryServlet?action=GETALL">QUẢN LÝ DANH MỤC</a></button>--%>
 <%--    <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-400"><a href="/ProductServlet?action=GETALL">QUẢN LÝ SẢN PHẨM</a></button>--%>
