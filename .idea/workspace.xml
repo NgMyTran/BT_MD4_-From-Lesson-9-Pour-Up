@@ -5,42 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8ac9b3b-3ac2-4ab0-8456-a16ff7204260" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/QuadraticEquation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/config/ConnectionDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/config/DispatcherConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/config/MVCConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/dao/IGenericDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/dao/customer/CustomerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/dao/customer/ICustomerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/service/IGenericService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/service/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/service/customer/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/add-customer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/detail-customer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/edit-customer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/list-customer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestBt2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/mvc/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/mvc/configorutil/ConnectionDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/mvc/controller/AccountServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/mvc/dao/IGenericDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/mvc/dao/account/AccountDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/mvc/dao/account/HistoryDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/mvc/dao/account/IAccountDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/mvc/dao/account/IHistoryDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/mvc/model/Account.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/mvc/model/History.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/mvc/service/IGenericService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/mvc/service/account/AccountServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/mvc/service/account/IAccountService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rikkei/acedemy/IGenericService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rikkei/acedemy/controller/StudentServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rikkei/acedemy/dao/CandidateDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rikkei/acedemy/model/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rikkei/acedemy/model/bt2/Candidate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rikkei/acedemy/model/bt2/CandidateSkill.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rikkei/acedemy/model/bt2/Skill.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rikkei/acedemy/service/student/IStudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rikkei/acedemy/service/student/StudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bt/create.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bt/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bt/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/account/history.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/account/home.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/account/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/account/sendMoney.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QuadraticEquation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,9 +60,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SERVLET" />
-        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -112,6 +99,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.TestBt2.executor": "Run",
     "Gradle.Build session9_MD4_WEB_APP.executor": "Run",
     "Gradle.session9_MD4_WEB_APP [:DatabaseSeeder.main()].executor": "Run",
     "Gradle.session9_MD4_WEB_APP [:Main.main()].executor": "Run",
@@ -119,9 +107,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 9.0.93.executor": "Run",
-    "git-widget-placeholder": "session14__MD4",
+    "Tomcat Server.list-customer.jsp.executor": "Run",
+    "git-widget-placeholder": "session16__MD4",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/TRAN/INTELLIJ/session9_MD4_WEB_APP",
+    "last_opened_file_path": "C:/Users/TRAN/INTELLIJ/demospringmvc",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -130,7 +119,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
     "sql.rename.search.for.storage.occurrences": "true",
     "vue.rearranger.settings.migration": "true"
   },
@@ -143,14 +132,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TRAN\INTELLIJ\session9_MD4_WEB_APP\src\main\java" />
       <recent name="C:\Users\TRAN\INTELLIJ\session9_MD4_WEB_APP\src\main\webapp\bt" />
       <recent name="C:\Users\TRAN\INTELLIJ\session9_MD4_WEB_APP\src\main\java\rikkei\acedemy\controller" />
       <recent name="C:\Users\TRAN\INTELLIJ\session9_MD4_WEB_APP\src\main\webapp\views\customer" />
       <recent name="C:\Users\TRAN\INTELLIJ\session9_MD4_WEB_APP\src\main\webapp\views\account" />
-      <recent name="C:\Users\TRAN\INTELLIJ\session9_MD4_WEB_APP\src\main\webapp" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestBt2">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.93">
     <configuration name="DatabaseSeeder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="rikkei.academy.util.DatabaseSeeder" />
       <module name="web.main" />
@@ -316,7 +305,10 @@
       <workItem from="1726163004281" duration="2418000" />
       <workItem from="1726165450966" duration="175000" />
       <workItem from="1726191100438" duration="8264000" />
-      <workItem from="1726400716232" duration="386000" />
+      <workItem from="1726400716232" duration="12255000" />
+      <workItem from="1726452908751" duration="7563000" />
+      <workItem from="1726477558213" duration="4011000" />
+      <workItem from="1726533024579" duration="658000" />
     </task>
     <servers />
   </component>
