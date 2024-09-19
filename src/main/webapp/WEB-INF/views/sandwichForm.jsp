@@ -17,6 +17,7 @@
     <c:forEach var="topping" items="${condimentList}">
       <input type="checkbox" name="condiment" value="${topping}"> ${topping}<br>
     </c:forEach>
+    <input type="submit" value="Choose">
   </form>
   </body>
 </html>

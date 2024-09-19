@@ -13,13 +13,11 @@
   </head>
   <body>
   <h1>Condiments Bill</h1>
-  <ul>
+    <ol>
     <c:forEach items="${selectedCondiments}" var="cond" >
-      <ol>
         <li>${cond}</li>
-      </ol>
     </c:forEach>
-  </ul>
+    </ol>
   <a href="/sandwich">Select Again</a>
   </body>
 </html>

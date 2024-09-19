@@ -6,7 +6,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import javax.servlet.Filter;
 
 //cau hinh dispatcherServlet
-public class AppInit extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class DispatcherConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
         //doc cac file or cau hinh goc (k lien quan den mvc)
@@ -16,7 +16,7 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
     @Override
     protected Class<?>[] getServletConfigClasses() {
         // cau hinh servlet, tiep nhan request, lien quan mvc
-        return new Class[]{WebConfig.class};
+        return new Class[]{MVCConfig.class};
     }
 
     @Override

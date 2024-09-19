@@ -14,7 +14,8 @@
 </head>
 <body>
 <h1>Simple Calculator</h1>
-<form action="save-calculator" method="get">
+<form action="/calculate/save" method="post">
+
     <label for="num1">Number 1:</label>
     <input type="number" name="num1" id="num1" step="any"><br/>
     <label for="num2">Number 2:</label>

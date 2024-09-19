@@ -1,73 +1,140 @@
 package ra.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import ra.model.Person;
+import ra.model.UploadModel;
+import org.springframework.util.FileCopyUtils;
+import org.springframework.web.multipart.MultipartFile;
+import javax.servlet.ServletContext;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @Controller
 @RequestMapping
 public class HomeController {
+    @Autowired
+    private ServletContext servletContext;
 
-    @RequestMapping("/")
+    @RequestMapping
     public String home() {
         return "home";
     }
 
-    @RequestMapping(value="/product", method= RequestMethod.POST)
-    public String product() {
-        return "product";
+    @GetMapping("/upload")
+    private String upload(Model model){
+        model.addAttribute("uploadModel",new UploadModel());
+        return "upload";
     }
+    @PostMapping("/upload") //xử lý request POST đến"/upload"
+    public String doUpload(@ModelAttribute("uploadModel") UploadModel uploadModel, Model model) {
+        String single = "";
+        List<String> multiple = new ArrayList<>();
 
-    @RequestMapping("/sandwich")
-    public String showForm(Model model) {
-        model.addAttribute("condimentList", new String[]{"Ketchup", "Mustard", "Mayonnaise", "Relish"});
-        return "sandwichForm";
-    }
+        // xử lý upload 1 file
+        String path = servletContext.getRealPath("/uploads"); // Lấy đường dẫn thực tế đến thư mục uploads trên server
+        File file = new File(path); // Tạo File với đường dẫn đã lấy
 
-    @RequestMapping("/sandwich/save")
-    public String save(@RequestParam("condiment") String[] condiments, Model model) {
-        model.addAttribute("selectedCondiments", condiments);
-        return "sandwichBill";
-    }
-
-    @RequestMapping("/calculate")
-    public String showCalculate(Model model) {
-        return "calculator";
-    }
-
-    @RequestMapping(value="/calculate", method=RequestMethod.POST)
-    public String calculate(@RequestParam double num1,
-                            @RequestParam double num2,
-                            @RequestParam("operation") String operation,
-                            Model model) {
-        double result = 0;
-        String operationSymbol = "";
-        switch (operation) {
-            case "+":
-                result = num1 + num2;
-                operationSymbol = " + ";
-                break;
-            case "-":
-                result = num1 - num2;
-                operationSymbol = " - ";
-                break;
-            case "*":
-                result = num1 * num2;
-                operationSymbol = " * ";
-                break;
-            case "/":
-                if (num2 != 0) {
-                    result = num1 / num2;
-                    operationSymbol = " / ";
-                } else {
-                    model.addAttribute("error", "Num2 khác 0");
-                    return "calculateBt2";
-                }
-                break;
+        if (!file.exists()) { // nếu thư mục không tồn tại
+            file.mkdirs(); // Tạo mới thư mục uploads
         }
-        model.addAttribute("result", num1 + operationSymbol + num2 + " = " + result);
-        return "calculateBt2";
+
+        single = uploadFile(uploadModel.getSingle(), path); // Gọi uploadFile để upload file đơn và lưu đường dẫn vào biến single
+
+        for (MultipartFile f : uploadModel.getMultiple()) { // Duyệt qua từng file trong danh sách file nhiều
+            String uploadPath = uploadFile(f, path);
+            multiple.add(uploadPath); // Thêm đường dẫn file đã upload vào danh sách multiple
+        }
+
+        model.addAttribute("one", single); // Thêm đường dẫn file đơn vào mô hình để sử dụng trong view
+        model.addAttribute("many", multiple);
+        return "image";
     }
+
+
+    private String uploadFile(MultipartFile file, String path) {
+        String fileName = file.getOriginalFilename();// lấy ra tên file upload
+        try {
+            FileCopyUtils.copy(file.getBytes(),new File(path +File.separator+ fileName));
+          // file.getBytes(): Lấy nội dung của file đã upload(dưới dạng mảng byte).
+            // new File(path + File.separator + fileName)Tạo một File mới với đường dẫn là path (thư mục lưu trữ trên server) + (fileName)
+           // sao chép nội dung từ mảng byte ( lấy từ file upload) vào vị trí mới mà đối tượng File đã chỉ định. Tức thực hiện lưu file đã upload vào thư mục đã chỉ định trên server.
+           // --> lưu nội dung của file đã upload vào một file mới trên server tại vị trí được chỉ định.
+            return "/uploads/"+ fileName;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @RequestMapping("/data-binding")
+    public String dataBinding(Model model) {
+        model.addAttribute("person", new Person());
+        model.addAttribute("listcheck", Arrays.asList("apple", "orrange", "grapes"));
+        return "dataBinding";
+    }
+
+    @PostMapping("/doAdd")
+    public String doAdd(@ModelAttribute("person")Person person, Model model) {
+        model.addAttribute("obj", person);
+        return "result-add-person";
+    }
+
+//
+//    @RequestMapping("/sandwich")
+//    public String showForm(Model model) {
+//        model.addAttribute("condimentList", new String[]{"Ketchup", "Mustard", "Mayonnaise", "Relish"});
+//        return "sandwichForm";
+//    }
+//
+//    @RequestMapping("/sandwich/save")
+//    public String save(@RequestParam("condiment") String[] condiments, Model model) {
+//        model.addAttribute("selectedCondiments", condiments);
+//        return "sandwichBill";
+//    }
+//
+//    @RequestMapping("/calculate")
+//    public String showCalculate(Model model) {
+//        return "calculateForm";
+//    }
+//
+//    @RequestMapping(value="/calculate", method=RequestMethod.POST)
+//    public String calculate(@RequestParam double num1,
+//                            @RequestParam double num2,
+//                            @RequestParam("operation") String operation,
+//                            Model model) {
+//        double result = 0;
+//        String operationSymbol = "";
+//        switch (operation) {
+//            case "+":
+//                result = num1 + num2;
+//                operationSymbol = " + ";
+//                break;
+//            case "-":
+//                result = num1 - num2;
+//                operationSymbol = " - ";
+//                break;
+//            case "*":
+//                result = num1 * num2;
+//                operationSymbol = " * ";
+//                break;
+//            case "/":
+//                if (num2 != 0) {
+//                    result = num1 / num2;
+//                    operationSymbol = " / ";
+//                } else {
+//                    model.addAttribute("error", "Num2 khác 0");
+//                    return "calculateForm";
+//                }
+//                break;
+//        }
+//        model.addAttribute("result", num1 + operationSymbol + num2 + " = " + result);
+//        return "calculate-result";
+//    }
+
 }

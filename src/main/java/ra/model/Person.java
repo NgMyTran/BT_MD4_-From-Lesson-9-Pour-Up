@@ -1,16 +1,20 @@
-package bt.model;
+package ra.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
+import java.util.List;
+
 @AllArgsConstructor
-@Getter
+@NoArgsConstructor
 @Setter
-public class Category {
+@Getter
+public class Person {
     private int id;
     private String name;
-    private boolean status;
+    private int age;
+    private String checkbox;
+    private List checkboxes;
 }
