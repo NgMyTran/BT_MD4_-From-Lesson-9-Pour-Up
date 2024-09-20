@@ -26,10 +26,5 @@ public class Medical {
     private String healthStatus;
     private String travelHistory;
 
-    public boolean isValid() {
-        return fullName != null && !fullName.trim().isEmpty() &&
-                idCard != null && !idCard.trim().isEmpty() &&
-                birthDate != null;
-    }
 
 }

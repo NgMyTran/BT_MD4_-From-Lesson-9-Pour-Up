@@ -37,7 +37,7 @@ public class MVCConfig implements ApplicationContextAware, WebMvcConfigurer {//c
     @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/WEB-INF/views/");
+        resolver.setPrefix("/WEB-INF/views/");// folder chwas cacs giao dien trong web app
         resolver.setSuffix(".jsp");
         return resolver;
     }

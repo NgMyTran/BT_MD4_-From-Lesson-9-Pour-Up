@@ -165,8 +165,13 @@ public String doUploadedMusic(@ModelAttribute("song") Song song, Model model, Mu
 
     @PostMapping("/updated")
     public String updateForm(@Valid Medical medical, BindingResult result) {
+       //BindingResult là một đối tượng trong Spring MVC dùng để lưu trữ kết quả của quá trình ràng buộc dữ liệu và kiểm tra hợp lệ từ một biểu mẫu (form).
+        // Khi\ gửi một biểu mẫu, Spring sẽ cố gắng lấy dữ liệu từ request và gán nó vào một đối tượng model (trg hợp này là Medical).
+        //Lưu Trữ Lỗi: Nếu có bất kỳ lỗi nào trong quá trình ràng buộc hoặc xác thực, BindingResult sẽ lưu trữ những lỗi này. Bạn có thể kiểm tra các lỗi này bằng cách gọi result.hasErrors().
+        //Truy Cập Thông Tin Lỗi: thấy thông tin chi tiết về lỗi bằng cách sử dụng các phương thức như result.getFieldErrors(), để có được danh sách các lỗi cụ thể cho từng trường.
+        //Xử Lý Lỗi: Nếu có lỗi, bạn có thể quyết định trả lại form cho người dùng với các thông báo lỗi hiển thị, thay vì lưu trữ thông tin và chuyển hướng đến trang khác.
         if (result.hasErrors()) {
-            return "update-medical";
+            return "update-medical";// Quay lại trang form để hiển thị lỗi
         }
         this.medicalData = medical;
 //        return "redirect:/display-medical";

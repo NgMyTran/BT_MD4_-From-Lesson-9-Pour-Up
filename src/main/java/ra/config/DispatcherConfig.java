@@ -30,4 +30,6 @@ public class DispatcherConfig extends AbstractAnnotationConfigDispatcherServletI
         CharacterEncodingFilter filter = new CharacterEncodingFilter("UTF-8", true);
         return new Filter[]{filter};
     }
+
+
 }

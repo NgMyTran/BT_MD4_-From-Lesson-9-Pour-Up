@@ -23,8 +23,8 @@
     <form:input path="genre" /><br/>
 
     <label>Chọn File:</label>
-    <input type="file" name="file" accept=".mp3,.wav,.ogg,.m4p" required/><br/>
-
+<%--    <input type="file" name="file" accept=".mp3,.wav,.ogg,.m4p" required/><br/>--%>
+    <audio src="" name="file"></audio>
     <input type="submit" value="Upload"/>
 </form:form>
 
