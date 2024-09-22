@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Detail</title>
+</head>
+<body>
+<h2>Product Detail</h2>
+
+<div>
+    <p><strong>ID:</strong> <span th:text="${product.id}"></span></p>
+    <p><strong>Name:</strong> <span th:text="${product.name}"></span></p>
+    <p><strong>Price:</strong> <span th:text="${product.price}"></span></p>
+    <p><strong>Stock:</strong> <span th:text="${product.stock}"></span></p>
+    <p><strong>Created Date:</strong> <span th:text="${#dates.format(product.created, 'dd/MM/yyyy')}"></span></p>
+    <p><strong>Image:</strong> <img th:src="${product.image}" alt="Product Image" style="max-width: 200px;"></p>
+    <p><strong>Status:</strong> <span th:text="${product.status ? 'Active' : 'Inactive'}"></span></p>
+</div>
+
+<a th:href="@{/products}">Back to Product List</a>
+</body>
+</html>
