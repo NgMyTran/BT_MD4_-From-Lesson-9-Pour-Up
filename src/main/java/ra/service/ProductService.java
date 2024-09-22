@@ -31,10 +31,10 @@ public class ProductService implements IProductService {
 
     @Override
     public void save(Product product) {
-        if (product == null) {
-            productDao.create(product);
-        } else {
+        if (findById(product.getId()) != null) {
             productDao.update(product);
+        } else {
+            productDao.create(product);
         }
     }
 

@@ -1001,7 +1001,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="jdbc">
-      <LastIntrospectionLocalTimestamp>2024-09-22.15:31:45</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-09-22.17:44:31</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="291" parent="1" name="login">
@@ -1466,7 +1466,7 @@ skill_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="399" parent="330" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>4</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1487,9 +1487,8 @@ skill_id</ColNames>
       <Position>4</Position>
     </column>
     <column id="403" parent="330" name="created">
-      <DasType>datetime|0s</DasType>
+      <DasType>timestamp|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="404" parent="330" name="image">

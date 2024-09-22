@@ -8,7 +8,8 @@ import java.sql.PreparedStatement;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.Date; // Thêm import cho java.sql.Date
-//import java.time.LocalDate;
+
+import java.time.LocalDate;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class ProductDao implements IProductDao {
                         rs.getString("name"),
                         rs.getDouble("price"),
                         rs.getInt("stock"),
-                        rs.getDate("created").toLocalDate(), // Sửa ở đây
+                        rs.getDate("created"), // Sửa ở đây
                         rs.getString("image"),
                         rs.getBoolean("status")
                 );
@@ -58,7 +59,7 @@ public class ProductDao implements IProductDao {
                         rs.getString("name"),
                         rs.getDouble("price"),
                         rs.getInt("stock"),
-                        rs.getDate("created").toLocalDate(), // Sửa ở đây
+                        rs.getDate("created"), // Sửa ở đây
                         rs.getString("image"),
                         rs.getBoolean("status")
                 );
@@ -81,6 +82,7 @@ public class ProductDao implements IProductDao {
             callst.setString(4, product.getImage());
             callst.setBoolean(5, product.isStatus());
             callst.executeUpdate();
+            System.out.println("Product added successfully: " + product);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

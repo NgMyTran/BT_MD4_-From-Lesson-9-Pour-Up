@@ -9,7 +9,6 @@ import ra.service.ProductService;
 
 import java.util.List;
 
-
 @Controller
 //@RequestMapping
 public class HomeController {

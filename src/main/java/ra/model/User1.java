@@ -5,19 +5,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
-
 @NoArgsConstructor
+@Setter
 @AllArgsConstructor
 @Getter
-@Setter
-public class Product {
+public class User1 {
     private int id;
-    private String name;
-    private double price;
-    private int stock;
-    private Date created;
-    private String image;
+    private String fullName;
+    private String email;
+    private String password;
+    private String address;
+    private String phone;
     private boolean status;
-
 }
