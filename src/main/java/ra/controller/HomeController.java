@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import ra.model.Product;
 import ra.service.ProductService;
 
@@ -44,7 +45,7 @@ private final ProductService productService;
         return "add-product";
     }
     @PostMapping("/products-added")
-    public String addProduct(@ModelAttribute Product product) {
+    public String addProduct(@ModelAttribute Product product, @RequestParam("image") MultipartFile image) {
         System.out.println("Adding product: " + product);
         productService.save(product);
         return "redirect:/products";
@@ -73,4 +74,6 @@ private final ProductService productService;
         model.addAttribute("product",productService.findById(id));
         return "detail-product";
 }
+
+
 }
