@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Product</title>
+</head>
+<body>
+<h1>Edit Product</h1>
+<form th:action="@{/product-update}" method="post">
+    <input type="hidden" name="id" th:value="${product.id}" readonly/>
+    <div>
+        <label for="name">Product Name:</label>
+        <input type="text" name="name" id="name" th:value="${product.name}" required>
+    </div>
+    <div>
+        <label for="price">Price:</label>
+        <input type="number" name="price" id="price" th:value="${product.price}" required>
+    </div>
+    <div>
+        <label for="stock">Stock:</label>
+        <input type="number" name="stock" id="stock" th:value="${product.stock}" required>
+    </div>
+    <div>
+        <label for="category">Category:</label>
+        <select name="categoryId" id="category" required>
+            <option th:each="category : ${categoryList}"
+                    th:value="${category.id}"
+                    th:text="${category.name}"
+                    th:selected="${category.id == product.category.id}"></option>
+        </select>
+    </div>
+    <div>
+        <label>Status:</label>
+        <div>
+            <input type="radio" name="status" value="true" id="active" th:checked="${product.status}"/>
+            <label for="active">Active</label>
+        </div>
+        <div>
+            <input type="radio" name="status" value="false" id="inactive" th:checked="${!product.status}"/>
+            <label for="inactive">Inactive</label>
+        </div>
+    </div>
+    <input type="submit" value="Update Product">
+</form>
+</body>
+</html>

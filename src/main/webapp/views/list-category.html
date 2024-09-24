@@ -1,9 +1,14 @@
+
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Danh sách Category</title>
+    <script>
+        function confirmDelete() {
+            return confirm("Category này hiện đang có sản phẩm. Bạn có chắc chắn muốn chuyển trạng thái của nó và các sản phẩm thuộc nó không?");
+        }
+    </script>
 </head>
 <body>
 <h1>Danh sách Category</h1>
@@ -18,15 +23,18 @@
     </tr>
     </thead>
     <tbody>
-
-    <tr th:each="c,loop : ${categories}">
-        <td th:text="${loop.count}"></td>
+    <tr th:each="c, loop : ${categories}">
+        <td th:text="${loop.index + 1}"></td>
         <td th:text="${c.name}"></td>
-        <td th:text="${c.status} ? Active: Inactive"></td>
+        <td th:text="${c.status} ? 'Active' : 'Inactive'"></td>
         <td><a th:href="|/edit/${c.id}|">Edit</a></td>
-        <td><a th:href="|/delete/${c.id}|">Delete</a></td>
+        <td>
+            <form th:action="|/category/delete/${c.id}|" method="post" style="display:inline;">
+                <input type="hidden" name="confirm" value="true">
+                <input type="submit" value="Delete" onclick="return confirmDelete();">
+            </form>
+        </td>
     </tr>
-
     </tbody>
 </table>
 </body>

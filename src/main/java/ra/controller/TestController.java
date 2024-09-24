@@ -6,17 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import ra.dao.customertest.EmployeeTestDao;
-import ra.model.entity.Category;
-import ra.model.entity.Department;
-import ra.model.entity.Employee;
-import ra.model.entity.EmployeeTest;
+import ra.model.entity.*;
 import ra.service.category.ICategoryService;
 import ra.service.customertest.IEmployeeTestSerice;
+import ra.service.product.IProductService;
 
 import javax.transaction.Transactional;
 import java.time.LocalDate;
@@ -29,6 +24,8 @@ public class TestController {
     private IEmployeeTestSerice employeeTestService;
     @Autowired
     private ICategoryService categoryService;
+    @Autowired
+    private IProductService productService;
 //    private LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean;
 
 
@@ -66,6 +63,8 @@ public class TestController {
         return "redirect:/employee";
     }
 
+
+
     @GetMapping("/category")
     public String listCategory(Model model) {
         model.addAttribute("categories", categoryService.findAll());
@@ -80,21 +79,67 @@ public class TestController {
         categoryService.save(category);
         return "redirect:/category";
     }
-
     @GetMapping("/edit/{id}")
     public String editForm(@PathVariable Integer id, Model model) {
         model.addAttribute("category", categoryService.findById(id));
         return"edit-category";
     }
     @PostMapping("/category-update")
-    public String updateCategory(@ModelAttribute Category category) {
+    public String updateCategory( @ModelAttribute Category category) {
         categoryService.save(category);
         return "redirect:/category";
     }
-    @GetMapping("/delete/{id}")
-    public String delete(@PathVariable Integer id, Model model) {
-        model.addAttribute("category", categoryService.findById(id));
-        categoryService.delete(id);
-        return"redirect:/category";
+    @PostMapping("/category/delete/{id}")
+    public String deleteCategory(@PathVariable Integer id, @RequestParam boolean confirm) {
+        categoryService.deleteCategory(id, confirm);
+        return "redirect:/category";
     }
+//    @GetMapping("/delete/{id}")
+//    public String delete(@PathVariable Integer id, Model model) {
+//        model.addAttribute("category", categoryService.findById(id));
+//        categoryService.delete(id);
+//        return"redirect:/category";
+//    }
+
+
+
+    @GetMapping("/product")
+    public String listProduct(Model model) {
+        model.addAttribute("products", productService.findAll());
+        return "list-product";
+    }
+    @GetMapping("/product-add")
+    public String addProductForm(Model model) {
+        //categories
+        model.addAttribute("categoryList", categoryService.findActiveCategories());
+        model.addAttribute("productList", productService.findAll());
+        return "add-product";
+    }
+    @PostMapping("/product-added")
+    public String addProduct(@ModelAttribute Product product,  @RequestParam Integer categoryId) {
+        Category category = categoryService.findById(categoryId);
+        product.setCategory(category);
+        productService.save(product);
+        return "redirect:/product";
+    }
+    @GetMapping("/product-edit/{id}")
+    public String editProductForm(@PathVariable Integer id, Model model) {
+        model.addAttribute("product", productService.findById(id));
+        model.addAttribute("categoryList", categoryService.findAll());
+        return "edit-product";
+    };
+    @PostMapping("/product-update")
+    public String updateProduct(@ModelAttribute Product product,@RequestParam Integer categoryId) {
+        Category category = categoryService.findById(categoryId);
+        product.setCategory(category);
+        productService.save(product);
+        return "redirect:/product";
+    }
+    @PostMapping("/delete/{id}")
+    public String deleteProduct(@PathVariable Integer id) {
+//        model.addAttribute("product", productService.findById(id));
+        productService.delete(id);
+        return "redirect:/product";
+    }
+
 }

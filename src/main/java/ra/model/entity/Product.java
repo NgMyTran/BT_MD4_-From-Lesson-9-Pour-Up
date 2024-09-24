@@ -1,6 +1,5 @@
 package ra.model.entity;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,7 +22,9 @@ public class Product {
     private String name;
     private Integer price;
     private Integer stock;
-    private boolean status=true;
+
+    @Column(columnDefinition = "default true")
+    private boolean status;
 
     @ManyToOne
     @JoinColumn(name = "category_id")

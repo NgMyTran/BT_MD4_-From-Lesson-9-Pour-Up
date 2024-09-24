@@ -3,7 +3,9 @@ package ra.service.category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ra.dao.category.ICategoryDao;
+import ra.dao.product.IProductDao;
 import ra.model.entity.Category;
+import ra.model.entity.Product;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -12,10 +14,16 @@ import java.util.List;
 public class CategoryServiceImpl implements ICategoryService {
     @Autowired
     private ICategoryDao categoryDao;
+    @Autowired
+    private IProductDao productDao;
 
     @Override
     public List<Category> findAll() {
         return categoryDao.findAll();
+    }
+    @Override
+    public List<Category> findActiveCategories() {
+        return categoryDao.findActiveCategories();
     }
 
     @Override
@@ -39,13 +47,20 @@ public class CategoryServiceImpl implements ICategoryService {
         categoryDao.delete(id);
     }
 
-//    @Override
-//    public void create(Category category) {
-//        categoryDao.create(category);
-//    }
-//
-//    @Override
-//    public void update(Category category) {
-//        categoryDao.update(category);
-//    }
+@Override
+@Transactional
+public void deleteCategory(Integer id, boolean confirm) {
+    Category cateDel = categoryDao.findById(id);
+    if (cateDel != null) {
+        //có sp thuộc category
+        if (!cateDel.getProducts().isEmpty() && confirm) {
+            for (Product pro : cateDel.getProducts()) {
+                pro.setStatus(false);
+                productDao.update(pro); // Cập nhật sản phẩm
+            }
+        }
+        categoryDao.delete(id);
+    }
+}
+
 }

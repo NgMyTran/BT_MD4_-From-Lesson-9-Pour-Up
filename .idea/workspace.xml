@@ -5,41 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8ac9b3b-3ac2-4ab0-8456-a16ff7204260" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/dao/category/CategoryDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/dao/category/ICategoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/dao/customertest/EmployeeTestDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/dao/customertest/IEmployeeTestDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/model/entity/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/model/entity/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/model/entity/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/model/entity/EmployeeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/model/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/model/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/service/category/CategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/service/category/ICategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/service/customertest/EmployeeTestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/service/customertest/IEmployeeTestSerice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/add-category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/add-employee-test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/edit-category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/list-category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/list-employee-test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/dao/product/IProductDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/dao/product/ProductDapImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/service/product/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/service/product/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/add-product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/edit-product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/list-product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/1ce68360-6e5a-4ae4-b6f4-e4d04018e49f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1ce68360-6e5a-4ae4-b6f4-e4d04018e49f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/config/HibernateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/customer/CustomerDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/customer/ICustomerDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/model/entity/Animals.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/model/entity/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/category/CategoryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/dao/category/CategoryDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/category/ICategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/dao/category/ICategoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/model/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/model/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/model/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/model/entity/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ra/service/IGenericService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/service/IGenericService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/service/customer/CustomerserviceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/service/customer/ICustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/service/category/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/service/category/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/service/category/ICategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/service/category/ICategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/add-customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/add-customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/edit-category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/edit-category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/list-category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/list-category.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,9 +59,10 @@
       <list>
         <option value="SERVLET" />
         <option value="Jsp File" />
-        <option value="HTML File" />
+        <option value="JavaFXApplication" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -301,7 +288,7 @@
       <workItem from="1726794430548" duration="16183000" />
       <workItem from="1726994839881" duration="27982000" />
       <workItem from="1727053208744" duration="23421000" />
-      <workItem from="1727139710505" duration="27202000" />
+      <workItem from="1727139710505" duration="42969000" />
     </task>
     <servers />
   </component>
@@ -335,11 +322,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/ra/controller/HomeController.java</url>
           <line>49</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ra/service/IGenericService.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ra/bt/service/category/CategoryService.java</url>

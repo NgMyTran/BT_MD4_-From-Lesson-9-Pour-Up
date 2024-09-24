@@ -22,6 +22,12 @@ public class CategoryDaoImpl implements ICategoryDao {
     }
 
     @Override
+    public List<Category> findActiveCategories() {
+        TypedQuery<Category> type = entityManager.createQuery("FROM Category WHERE status = true", Category.class);
+        return type.getResultList();
+    }
+
+    @Override
     public Category findById(Integer id) {
         TypedQuery<Category> type = entityManager.createQuery("from Category where id = :id", Category.class);
         Category cate = type.setParameter("id", id).getSingleResult();
@@ -46,4 +52,5 @@ public class CategoryDaoImpl implements ICategoryDao {
             entityManager.merge(cateDel);
         }
     }
+
 }
