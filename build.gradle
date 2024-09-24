@@ -22,7 +22,6 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
-
 //  implementation 'org.thymeleaf:thymeleaf:3.1.2.RELEASE'
   // https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf-spring5
   implementation 'org.thymeleaf:thymeleaf-spring5:3.1.2.RELEASE'
@@ -40,6 +39,15 @@ dependencies {
 
   // https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload
   implementation 'commons-fileupload:commons-fileupload:1.5'
+
+  // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+  implementation 'org.hibernate:hibernate-core:5.3.20.Final'
+
+  // https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
+  implementation 'org.hibernate:hibernate-entitymanager:5.4.2.Final'
+
+// https://mvnrepository.com/artifact/org.springframework/spring-orm
+  implementation 'org.springframework:spring-orm:5.3.18'
 
   testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")

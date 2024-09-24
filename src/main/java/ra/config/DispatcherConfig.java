@@ -10,7 +10,7 @@ public class DispatcherConfig extends AbstractAnnotationConfigDispatcherServletI
     @Override
     protected Class<?>[] getRootConfigClasses() {
         //doc cac file or cau hinh goc (k lien quan den mvc)
-        return new Class[0];
+        return new Class[]{HibernateConfig.class};
     }
 
     @Override
@@ -30,6 +30,5 @@ public class DispatcherConfig extends AbstractAnnotationConfigDispatcherServletI
         CharacterEncodingFilter filter = new CharacterEncodingFilter("UTF-8", true);
         return new Filter[]{filter};
     }
-
 
 }

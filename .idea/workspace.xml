@@ -5,18 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8ac9b3b-3ac2-4ab0-8456-a16ff7204260" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-to-cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart-order.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-product1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-product1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/config/HibernateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/dao/customer/CustomerDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/dao/customer/ICustomerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/model/entity/Animals.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/model/entity/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/model/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/service/customer/CustomerserviceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ra/service/customer/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/add-customer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/detail-customer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/edit-customer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/list-customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/1ce68360-6e5a-4ae4-b6f4-e4d04018e49f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1ce68360-6e5a-4ae4-b6f4-e4d04018e49f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1ce68360-6e5a-4ae4-b6f4-e4d04018e49f/storage_v2/_src_/schema/jdbc.-7IxAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1ce68360-6e5a-4ae4-b6f4-e4d04018e49f/storage_v2/_src_/schema/jdbc.-7IxAA.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d50c9235-a9a7-4d96-b299-bd8d2ba594e7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d50c9235-a9a7-4d96-b299-bd8d2ba594e7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/config/ConnectionDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/config/DispatcherConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/config/DispatcherConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/config/MVCConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/config/MVCConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/controller/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/IGenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/dao/IGenericDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/IProductDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/ProductDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/category1/Category1Dao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/category1/ICategory1Dao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/order1/IOrder1Dao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/order1/Order1DaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/orderDteails1/IOrderDetails1Dao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/orderDteails1/OrderDetails1DaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/produc1/IProduct1Dao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/produc1/Product1DaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/user1/IUse1Dao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/dao/user1/User11DaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/model/Category1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/model/Order1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/model/OrderDetails1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/model/Product1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/model/User1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/service/IGenericService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/service/IGenericService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/service/IProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ra/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-to-cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart-order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/detail-product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-product1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-product1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,10 +95,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SERVLET" />
-        <option value="Class" />
-        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -92,43 +138,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.TestBt2.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Gradle.Build session9_MD4_WEB_APP.executor": "Run",
-    "Gradle.session9_MD4_WEB_APP [:DatabaseSeeder.main()].executor": "Run",
-    "Gradle.session9_MD4_WEB_APP [:Main.main()].executor": "Run",
-    "Gradle.session9_MD4_WEB_APP [:TestBt2.main()].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 9.0.93.executor": "Run",
-    "Tomcat Server.Tomcat 9.0.931.executor": "Debug",
-    "Tomcat Server.Unnamed.executor": "Run",
-    "Tomcat Server.home.jsp.executor": "Run",
-    "Tomcat Server.list-customer.jsp.executor": "Run",
-    "git-widget-placeholder": "session19__MD4",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/TRAN/INTELLIJ/demospringmvc",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "fileTemplates",
-    "sql.rename.search.for.storage.occurrences": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TestBt2.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Gradle.Build session9_MD4_WEB_APP.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.session9_MD4_WEB_APP [:DatabaseSeeder.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.session9_MD4_WEB_APP [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.session9_MD4_WEB_APP [:TestBt2.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 9.0.93.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.Tomcat 9.0.931.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.home.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.list-customer.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;session20__MD4&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/TRAN/INTELLIJ/demospringmvc&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
+    &quot;sql.rename.search.for.storage.occurrences&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql_aurora_aws",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql_aurora_aws&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\TRAN\INTELLIJ\session9_MD4_WEB_APP\src\main\webapp\WEB-INF\views" />
@@ -277,7 +323,8 @@
       <workItem from="1726770637360" duration="2761000" />
       <workItem from="1726794430548" duration="16183000" />
       <workItem from="1726994839881" duration="27982000" />
-      <workItem from="1727053208744" duration="8291000" />
+      <workItem from="1727053208744" duration="23421000" />
+      <workItem from="1727139710505" duration="1997000" />
     </task>
     <servers />
   </component>
@@ -309,7 +356,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ra/controller/HomeController.java</url>
-          <line>50</line>
+          <line>49</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
