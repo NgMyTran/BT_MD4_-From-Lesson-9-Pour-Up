@@ -1,4 +1,4 @@
-package ra.dao;
+package ra.orm.dao;
 
 import java.util.List;
 

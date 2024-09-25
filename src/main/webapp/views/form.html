@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/validate" method="post" th:object="${formrequest}">
+    <input type="checkbox" th:field="*{checkboxValue}" th:value="${formrequest.checkboxValue}">
+   <p style="color: red" th:if="${#fields.hasErrors('checkboxValue')}" th:errors="*{checkboxValue}"></p>
+    <br>
+
+    <select th:field="*{selectedValues}" multiple>
+        <option value="banana">Chuối</option>
+        <option value="apple">Táo</option>
+        <option value="orange">Cam</option>
+    </select>
+    <p style="color: red" th:if="${#fields.hasErrors('selectedValues')}" th:errors="*{selectedValues}"></p>
+    <br>
+
+    <input type="text" th:field="*{name}" placeholder="Input name">
+    <p style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+    <br>
+
+    <input type="password" th:field="*{password}" placeholder="Input pass">
+    <p style="color: red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+
+    <button type="submit">Gửi</button>
+</form>
+</body>
+</html>

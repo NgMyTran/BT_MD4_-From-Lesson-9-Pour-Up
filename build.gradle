@@ -46,6 +46,9 @@ dependencies {
   // https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
   implementation 'org.hibernate:hibernate-entitymanager:5.4.2.Final'
 
+  // https://mvnrepository.com/artifact/org.hibernate/hibernate-validator
+  implementation 'org.hibernate:hibernate-validator:5.2.4.Final'
+
   // https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa
   implementation 'org.springframework.data:spring-data-jpa:2.4.2'
   //hoox tro tang dao
