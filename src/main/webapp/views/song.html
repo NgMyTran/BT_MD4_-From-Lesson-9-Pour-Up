@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm Bài Hát</title>
+</head>
+<body>
+
+<form action="/add-song" method="post" th:object="${song}">
+    <input type="text" th:field="*{songName}" placeholder="Nhập tên bài hát">
+    <p style="color: red" th:if="${#fields.hasErrors('songName')}" th:errors="*{songName}"></p>
+    <br>
+
+    <input type="text" th:field="*{singerName}" placeholder="Nhập tên ca sĩ">
+    <p style="color: red" th:if="${#fields.hasErrors('singerName')}" th:errors="*{singerName}"></p>
+    <br>
+
+    <input type="text" th:field="*{genre}" placeholder="Nhập thể loại">
+    <p style="color: red" th:if="${#fields.hasErrors('genre')}" th:errors="*{genre}"></p>
+    <br>
+
+    <label>
+        Trạng thái:
+        <input type="checkbox" th:field="*{status}"> Kích hoạt
+    </label>
+    <br>
+
+    <button type="submit">Thêm Bài Hát</button>
+</form>
+
+</body>
+</html>
+
+</body>
+</html>

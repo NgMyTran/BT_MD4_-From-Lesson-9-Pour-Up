@@ -6,6 +6,13 @@
     <title>Title</title>
 </head>
 <body>
+<h2><a href="/bt1">BT1: register</a></h2>
+<h2><a href="/login">BT1: login</a></h2>
+<h2><a href="/song">BT2: Song</a></h2>
+<h2><a href="/product">BT3: Product</a></h2>
+
+
+
 <form action="/validate" method="post" th:object="${formrequest}">
     <input type="checkbox" th:field="*{checkboxValue}" th:value="${formrequest.checkboxValue}">
    <p style="color: red" th:if="${#fields.hasErrors('checkboxValue')}" th:errors="*{checkboxValue}"></p>

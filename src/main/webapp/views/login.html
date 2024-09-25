@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/logged" method="post" th:object="${userLogin}">
+
+    <input type="text" th:field="*{fullName}" placeholder="Input name">
+    <p style="color: red" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"></p>
+    <br>
+    <input type="password" th:field="*{password}" placeholder="Input pass">
+    <p style="color: red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+    <br>
+    <button type="submit">Đăng nhập</button>
+</form>
+</body>
+</html>

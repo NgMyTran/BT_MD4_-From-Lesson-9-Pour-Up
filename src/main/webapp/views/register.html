@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/registered" method="post" th:object="${userRegister}">
+
+    <input type="text" th:field="*{fullName}" placeholder="Input name">
+    <p style="color: red" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"></p>
+    <br>
+    <input type="text" th:field="*{email}" placeholder="Input email">
+    <p style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+    <br>
+    <input type="password" th:field="*{password}" placeholder="Input pass">
+    <p style="color: red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+    <br>
+    <input type="text" th:field="*{address}" placeholder="Input address">
+    <p style="color: red" th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></p>
+    <br>
+    <input type="text" th:field="*{phone}" placeholder="Input phone">
+    <p style="color: red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></p>
+    <br>
+
+<!--    <label>-->
+<!--        <input type="radio" th:field="*{status}" value="true"> Active-->
+<!--    </label>-->
+<!--    <label>-->
+<!--        <input type="radio" th:field="*{status}" value="false"> Inactive-->
+<!--    </label>-->
+<!--    <p style="color: red" th:if="${#fields.hasErrors('status')}" th:errors="*{status}"></p>-->
+<!--    <br>-->
+    <button type="submit">Gửi</button>
+</form>
+</body>
+</html>
