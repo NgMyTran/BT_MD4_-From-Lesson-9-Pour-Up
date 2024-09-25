@@ -28,7 +28,12 @@
         <td th:text="${c.name}"></td>
         <td th:text="${c.status} ? 'Active' : 'Inactive'"></td>
         <td><a th:href="|/edit/${c.id}|">Edit</a></td>
-        <td>
+<!--        <td>-->
+<!--            <form th:action="|/category/delete/${c.id}|" method="post" style="display:inline;">-->
+<!--                <input type="submit" value="Delete">-->
+<!--            </form>-->
+<!--        </td>-->
+                <td>
             <form th:action="|/category/delete/${c.id}|" method="post" style="display:inline;">
                 <input type="hidden" name="confirm" value="true">
                 <input type="submit" value="Delete" onclick="return confirmDelete();">

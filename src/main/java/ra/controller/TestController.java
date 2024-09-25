@@ -27,8 +27,6 @@ public class TestController {
     @Autowired
     private IProductService productService;
 //    private LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean;
-
-
 //    @GetMapping
 //    public String test() {
 //        Department d1 = new Department(0,"Marketing", true, new ArrayList<>());
@@ -91,7 +89,13 @@ public class TestController {
     }
     @PostMapping("/category/delete/{id}")
     public String deleteCategory(@PathVariable Integer id, @RequestParam boolean confirm) {
-        categoryService.deleteCategory(id, confirm);
+        Category category = categoryService.findById(id);
+        // Cập nhật trạng thái của từng product thuộc category
+        for (Product product : category.getProducts()) {
+            product.setStatus(false);
+            productService.save(product); // Lưu thay đổi cho sản phẩm
+        }
+        categoryService.delete(id);
         return "redirect:/category";
     }
 //    @GetMapping("/delete/{id}")
@@ -137,7 +141,6 @@ public class TestController {
     }
     @PostMapping("/delete/{id}")
     public String deleteProduct(@PathVariable Integer id) {
-//        model.addAttribute("product", productService.findById(id));
         productService.delete(id);
         return "redirect:/product";
     }

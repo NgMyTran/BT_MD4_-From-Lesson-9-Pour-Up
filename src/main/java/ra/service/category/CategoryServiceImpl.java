@@ -46,21 +46,21 @@ public class CategoryServiceImpl implements ICategoryService {
     public void delete(Integer id) {
         categoryDao.delete(id);
     }
-
-@Override
-@Transactional
-public void deleteCategory(Integer id, boolean confirm) {
-    Category cateDel = categoryDao.findById(id);
-    if (cateDel != null) {
-        //có sp thuộc category
-        if (!cateDel.getProducts().isEmpty() && confirm) {
-            for (Product pro : cateDel.getProducts()) {
-                pro.setStatus(false);
-                productDao.update(pro); // Cập nhật sản phẩm
-            }
-        }
-        categoryDao.delete(id);
-    }
-}
+//
+//@Override
+//@Transactional
+//public void deleteCategory(Integer id, boolean confirm) {
+//    Category cateDel = categoryDao.findById(id);
+//    if (cateDel != null) {
+//        //có sp thuộc category
+//        if (!cateDel.getProducts().isEmpty() && confirm) {
+//            for (Product pro : cateDel.getProducts()) {
+//                pro.setStatus(false);
+//                productDao.update(pro); // Cập nhật sản phẩm
+//            }
+//        }
+//        categoryDao.delete(id);
+//    }
+//}
 
 }
