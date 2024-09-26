@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8ac9b3b-3ac2-4ab0-8456-a16ff7204260" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/orm/controller/UserControlelr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/orm/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/orm/model/Song.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/orm/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/orm/validate/LoginValidate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/orm/validate/ProductValidate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/orm/validate/RegisterValidate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ra/orm/validate/SongValidate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/product.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/song.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ra/orm/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ra/orm/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +270,7 @@
       <workItem from="1726994839881" duration="27982000" />
       <workItem from="1727053208744" duration="23421000" />
       <workItem from="1727139710505" duration="43273000" />
-      <workItem from="1727225693679" duration="25627000" />
+      <workItem from="1727225693679" duration="26233000" />
     </task>
     <servers />
   </component>
